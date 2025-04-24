@@ -1,0 +1,36 @@
+# Ignore dexjar JAR files
+dexjar*.jar
+
+# Ignore input folder (any depth)
+**/input/
+
+# Ignore compiled Java class files
+*.class
+
+# Ignore logs
+*.log
+
+# Ignore build directories (for common build tools)
+build/
+out/
+bin/
+target/
+
+# Ignore IDE/project files
+*.iml
+.idea/
+*.ipr
+*.iws
+*.DS_Store
+.vscode/
+
+# Ignore environment files
+.env
+
+# Ignore temporary files
+*.swp
+*.tmp
+*~
+
+# Ignore Mac system files
+.DS_Store
