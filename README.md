@@ -18,11 +18,11 @@ This is [GoldenBoot's](https://github.com/redragon14368) fork of the [dex2jar](h
 ### Prerequisites
 
 - Ensure you have Java installed (`Java 7` or higher is recommended).
-- Download the latest build from the [Releases](https://github.com/redragon14368/DexJar/releases).
+- Download the latest build from the [Releases](https://github.com/redragon14368/Dex2Jar2Dex/releases).
 
 ### Installation
 
-1. Download the latest `dexjar.jar` file from the [Releases](https://github.com/redragon14368/DexJar/releases) page.
+1. Download the latest `dexjar.jar` file from the [Releases](https://github.com/redragon14368/Dex2Jar2Dex/releases) page.
 2. Place the file in your desired directory.
 
 ## Example Usage
