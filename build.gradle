@@ -1,0 +1,27 @@
+
+plugins {
+    id 'java'
+}
+
+group 'com.goldenboot.d2j'
+//version '1.0'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+jar {
+duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+destinationDirectory.set(file("${projectDir}"))
+    manifest {
+        attributes(
+            'Main-Class': 'com.goldenboot.d2j.GoldenBoot'
+        )
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
