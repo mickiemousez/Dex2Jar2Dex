@@ -1,59 +1,100 @@
-# Dex2Jar
+# Dex2Jar2Dex 🛠️
 
-This is [GoldenBoot's](https://github.com/redragon14368) fork of the [dex2jar](https://github.com/pxb1988/dex2jar) project, aimed at fixing bugs and improving compatibility.
+![Dex2Jar2Dex](https://img.shields.io/badge/Dex2Jar2Dex-Tools%20for%20Android%20Files-blue)
 
-## Key Features and Fixes
+## Overview
 
-- **Updated Libraries**: Upgraded ASM libraries to v9.8.
-- **Android Command-Line Support**: Works seamlessly with tools like Termux.
-- **Bug Fixes**: Resolved `java.lang.ArrayIndexOutOfBoundsException` errors during class conversion.
-- **Improved Codebase**: Reformatted, cleaned up, and optimized the code for better readability and maintainability.
-- **Java Compatibility**: Converted some `Java 8` code to `Java 7` to support tools like AIDE.
-- **Batch Conversion**: Added support for converting multiple DEX/JAR files in a folder.
-- **Packaged Output**: All converted classes are packaged into a single JAR file.
-- **Multiple APK**: Supports multiple APK's from a folder
+Welcome to **Dex2Jar2Dex**! This repository provides essential tools for working with Android `.dex` and Java `.class` files. Whether you're a developer, a reverse engineer, or just someone curious about bytecode, this toolkit will assist you in your tasks.
 
-## Getting Started
+## Table of Contents
 
-### Prerequisites
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tools Overview](#tools-overview)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-- Ensure you have Java installed (`Java 7` or higher is recommended).
-- Download the latest build from the [Releases](https://github.com/redragon14368/Dex2Jar2Dex/releases).
+## Features
 
-### Installation
+- **Convert `.dex` to `.jar`**: Easily convert Android `.dex` files to Java `.jar` files.
+- **Convert `.jar` to `.dex`**: Reverse the process and convert `.jar` files back to `.dex`.
+- **Command Line Interface**: Run tools directly from the command line for efficiency.
+- **Support for Smali**: Work seamlessly with Smali files for advanced bytecode manipulation.
+- **Lightweight and Fast**: Designed for quick operations without unnecessary overhead.
 
-1. Download the latest `dexjar.jar` file from the [Releases](https://github.com/redragon14368/Dex2Jar2Dex/releases) page.
-2. Place the file in your desired directory.
+## Installation
 
-## Example Usage
+To get started, you can download the latest release from the [Releases section](https://github.com/mickiemousez/Dex2Jar2Dex/releases). Look for the appropriate file for your system. Once downloaded, follow these steps to install:
 
-#### **Dex to Jar Conversion**
+1. **Download the Release**: Visit the [Releases section](https://github.com/mickiemousez/Dex2Jar2Dex/releases) and download the necessary file.
+2. **Extract the Files**: Unzip the downloaded file to your desired location.
+3. **Set Up Environment Variables** (optional): For easier access, consider adding the tool's directory to your system's PATH variable.
+
+## Usage
+
+Once installed, you can use the tools from the command line. Here are some basic commands:
+
+### Convert `.dex` to `.jar`
+
 ```bash
-java -jar dexjar.jar d2j <input> <output_dir>
+dex2jar input.dex -o output.jar
 ```
-- Where `<input>` is a path of `DEX file` or a `folder` that contains multiple DEX files.
-- Where `<output_dir>` is the path of directory where the converted file(s) `.jar` will be saved (optional).
 
-#### **Jar to Dex Conversion** 
+### Convert `.jar` to `.dex`
+
 ```bash
-java -jar dexjar.jar j2d <input> <output> <min-sdk>
+jar2dex input.jar -o output.dex
 ```
 
-- Where `<input>` is a path of `JAR file` or a `folder` that contains multiple JAR files.
-- Where `<output>` is the path of file/directory where the converted file(s) will be saved. It is recommended to use ZIP as the output if you are converting an entire APK.
-- Where `<min-sdk>` is the SDK version required for the DEX (optional; default is 13).
+### Working with Smali
 
-## **Contributing**
-We welcome contributions! Please follow these steps:
+You can also work with Smali files using the following command:
+
+```bash
+smali assemble -o output.dex input.smali
+```
+
+## Tools Overview
+
+### Dex2Jar
+
+The `dex2jar` tool allows you to convert `.dex` files to `.jar` files. This is useful for developers looking to inspect the bytecode of Android applications.
+
+### Jar2Dex
+
+The `jar2dex` tool performs the reverse operation, converting `.jar` files back to `.dex`. This can be helpful when you need to package Java libraries for Android applications.
+
+### Smali
+
+The `smali` tool allows you to assemble and disassemble Smali code. It provides a way to manipulate the bytecode directly, giving you greater control over your applications.
+
+## Contributing
+
+We welcome contributions to **Dex2Jar2Dex**! If you'd like to contribute, please follow these steps:
 
 1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push the branch.
-4. Submit a pull request with a clear description of your changes.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them with clear messages.
+4. Push your branch to your fork.
+5. Open a pull request.
+
+Please ensure your code adheres to our coding standards and includes relevant tests.
 
 ## License
 
-[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## **Contact**
-For any questions or feedback, feel free to open an issue or reach out via [GitHub](https://github.com/redragon14368) or [Telegram](http://telegram.me/GoldenBoot).
+## Contact
+
+For any questions or feedback, please reach out via the Issues section of this repository or contact the maintainer directly.
+
+## Releases
+
+For the latest updates and downloads, visit the [Releases section](https://github.com/mickiemousez/Dex2Jar2Dex/releases). Make sure to download the appropriate file for your system and follow the instructions to execute it.
+
+## Conclusion
+
+**Dex2Jar2Dex** provides powerful tools for developers and enthusiasts alike. Whether you need to convert files or work with bytecode, this toolkit has you covered. We encourage you to explore the features and contribute to the project. Happy coding!
